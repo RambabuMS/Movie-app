@@ -7,6 +7,8 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { CardActions } from '@mui/material';
+import Badge from '@mui/material/Badge';
+
 
 export function Rating({ name, img, cast, genre, summary, director, rating,deletebutton,editbutton,id },index) {
   const [dislike, setdislike] = useState(0);
@@ -18,7 +20,7 @@ export function Rating({ name, img, cast, genre, summary, director, rating,delet
   };
   return (
     
-    <Card sx={{ backgroundColor: "lightblue" }}className="movie-container">
+    <Card className="movie-container">
     <CardContent>
         <img src={img} id="res" className="poster" alt="pics" />
         
@@ -35,21 +37,24 @@ export function Rating({ name, img, cast, genre, summary, director, rating,delet
       <p style={styles}>IMDB Rating : ⭐{rating}</p>
       </CardContent>
       <CardActions>
-      <div className="buton">
+      
         <IconButton
          color="primary" 
          aria-label="like-button"
          onClick={() => setlike(like + 1)}>
-         👍{like}
+        <Badge badgeContent={like} color="primary">
+         👍</Badge>
          </IconButton>
         <IconButton
          color="error"
          aria-label="dislike-button"
           onClick={() => setdislike(dislike + 1)}>
-          👎{dislike}
+          <Badge badgeContent={dislike} color="error">
+          👎</Badge>
           </IconButton>
-        {editbutton}{deletebutton}
-      </div>
+        {deletebutton}
+        {editbutton}
+      
       </CardActions>
     </Card>
     

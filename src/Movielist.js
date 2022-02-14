@@ -12,14 +12,18 @@ export function Movielist({ movielist,setMovielist }) {
       {movielist.map(( prop, index) => (
         <Rating
           {...prop}
-          deletebutton={<IconButton color="error" onClick={()=>{
+          deletebutton={
+                      <IconButton 
+                       style={{marginLeft:"auto"}}
+                       onClick={()=>{
                        const copylist=[...movielist];
                        copylist.splice(index,1);
                        setMovielist(copylist);
-          }} aria-label="delete" size="large">
+          }} color="error" 
+           aria-label="delete" size="medium">
 <DeleteIcon />
 </IconButton>}
-         editbutton={<IconButton color="secondary" onClick={()=>history.push(`/movies/edit/${index}`)}
+         editbutton={<IconButton  color="secondary" onClick={()=>history.push(`/movies/edit/${index}`)}
          aria-label="edit" size = "medium">
 <EditIcon />
 </IconButton>

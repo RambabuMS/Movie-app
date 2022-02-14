@@ -4,6 +4,7 @@
 
 .full-game{
   background-image: url("https://static.vecteezy.com/system/resources/previews/004/532/221/non_2x/tic-tac-toe-seamless-background-on-dark-blue-illustration-vector.jpg");
+  min-height: 100vh;
 }
 .movie-container{
   height:min-content;
@@ -19,10 +20,6 @@ img {
   height: 500px;
   margin-top: 20px;
   object-fit:cover;
-}
-.buton{
-   display:flex;
-   gap: 15px;
 }
 .movie{
   display: flex;
@@ -96,11 +93,7 @@ body{
     justify-content: center;
     align-items: center;
   }
-  .head{
-    background-image: linear-gradient(lightgreen,lightblue);
-    width: 100%;
-    text-align: center;
-  }
+
   .turnhide{
     display :none;
   }
