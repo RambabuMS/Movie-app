@@ -58,7 +58,6 @@ export default function App() {
           {mode === "light" ? "dark" : "light" } Mode</Button>
         </Toolbar>
       </AppBar>
-
       <div className="route-container">
       <Switch>
       <Route exact path="/">

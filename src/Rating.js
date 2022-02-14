@@ -28,8 +28,7 @@ export function Rating({ name, img, cast, genre, summary, director, rating,delet
       <div style={{ width: "350px" }}>
         <IconButton color="success" aria-label="toggle-summary" onClick={() => setShow((s) => !s)}>
           {show ?<ExpandLessIcon />:<ExpandMoreIcon />}</IconButton>
-       {show ? <div><p><b>Cast :</b> {cast}</p>
-      <p><b>Genre :</b> {genre}</p><p><b>Summary :</b>{summary}</p></div> : ""}  
+       {show ? <div><p><b>Genre :</b> {genre}</p><p><b>Summary :</b>{summary}</p></div> : ""}  
         <IconButton color="primary" variant="outlined" onClick={() => history.push(`/movies/${id}`)}><InfoIcon /></IconButton>
         </div>
         
