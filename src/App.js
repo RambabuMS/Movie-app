@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { Newcolor } from "./Newcolor";
 import { TicTacToe } from "./TicTacToe";
 import { Switch, Route, Link,Redirect } from "react-router-dom";
@@ -10,19 +11,37 @@ import { NotFound } from "./NotFound";
 import { Addmovie } from "./Addmovie";
 import { Moviedetails } from "./Moviedetails";
 import { Updatemovie } from "./Updatemovie";
-
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function App() {
   const [movielist,setMovielist]=useState(INITIAL_MOVIE_LIST);
+
+  const history= useHistory();
   return (
     <div className="App">
-         <div className="links">
-         <Link className="link" to="/">Home</Link>
-        <Link className="link" to="/movies">Movies</Link>
-        <Link className="link" to="/movies/add">Add New Movie</Link>
-        <Link className="link" to="/color-game">Color Game</Link>
-        <Link className="link" to="/tic-tac-toe">Tic-Tac-Toe Game</Link>   
-      </div>
+         
+      <AppBar position="static">
+        <Toolbar>
+          <Button color="inherit" onClick={() => history.push("/")}>
+          Home</Button>
+          <Button color="inherit" onClick={() => history.push("/movies")}>
+          Movies</Button>
+          <Button color="inherit" onClick={() => history.push("/movies/add")}>
+          Add Movie</Button>
+          <Button color="inherit" onClick={() => history.push("/color-game")}>
+          Color Game</Button>
+          <Button color="inherit" onClick={() => history.push("/tic-tac-toe")}>
+          Tic Tac Toe</Button>
+        </Toolbar>
+      </AppBar>
+
+      <div className="route-container">
       <Switch>
       <Route exact path="/">
           <Homepage />
@@ -44,7 +63,7 @@ export default function App() {
         <Route path="/tic-tac-toe"><TicTacToe /></Route>
         <Route path="**"><NotFound /></Route>
       </Switch>
-
+      </div>
     </div>
   );
 }
