@@ -72,8 +72,8 @@ export function TicTacToe() {
       ))}
     </div>
 
-    {winner ? <h2> Game Finished and {winner}</h2> : ""}
-    {dcondition ? <h2> Game Finished and {dcondition}</h2> : ""}
+    {winner ? <h2 className="head"> Game Finished and {winner}</h2> : ""}
+    {dcondition ? <h2 className="head"> Game Finished and {dcondition}</h2> : ""}
      
 
      <div className="restart">
