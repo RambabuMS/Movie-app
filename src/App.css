@@ -1,38 +1,142 @@
 .App {
-  text-align: center;
+  font-family: sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 50px;
+  padding: 20px;
+  font-size: medium;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.link{
+  text-decoration: none;
+  color: purple;
+  font-weight: bold;
+}
+.full-game{
+  background-image: url("https://static.vecteezy.com/system/resources/previews/004/532/221/non_2x/tic-tac-toe-seamless-background-on-dark-blue-illustration-vector.jpg");
+}
+.movie-container{
+  height:min-content;
+}
+.link:hover{
+   border-bottom: 1px solid black;
+   color:black;
+}
+img {
+  border-radius: 25px;
+  width: 350px;
+  height: 500px;
+  margin-top: 20px;
+  object-fit:cover;
+}
+.buton{
+   display:flex;
+   gap: 15px;
+}
+.movie{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  gap: 16px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  .input{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  }
+  .text{
+    width:50%;
+  }
+  .buton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.color-box{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 100px;
+}
+.Colorbox{
+  border: 1px solid black;
+  border-radius:20px;
 }
 
-.App-link {
-  color: #61dafb;
+.homepage{
+  text-align: center;
+  Margin-top: 100px;
+  
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.play{
+  margin-top: 20px;
+  display: flex;
+  gap: 20px ;
 }
+.restart{
+  margin-top: 50px;
+}
+.game-box{
+    height: 160px;
+    width: 160px;
+    border: 1px solid black;
+    font-size: 150px;
+    background-color: lightcyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+body{
+   background-color:whitesmoke;
+}
+.board{
+    display: flex;
+    flex-wrap: wrap;
+    width: 492px;
+    margin-top: 30px;
+  }
+  .full-game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .head{
+    background-image: linear-gradient(lightgreen,lightblue);
+    width: 100%;
+    text-align: center;
+  }
+  .turnhide{
+    display :none;
+  }
+  .showturn{
+    display :block;
+    color: lightblue
+  }
+  .error-page{
+    text-align: center;
+    font-size: 60px;
+    margin:0;
+  }
+  .nfound{
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
