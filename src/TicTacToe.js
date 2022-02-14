@@ -103,13 +103,3 @@ function isBoardFull(board) {
   return true;
 }
 
-function isBoardFill(board) {
-  for (let i = 0; i < board.length; i++) {
-    if (board[i] === null) {
-      return true;
-    }
-  }
-  return false;
-}
-
-//
