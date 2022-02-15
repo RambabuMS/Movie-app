@@ -3,23 +3,47 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { useHistory } from "react-router-dom";
+import { useState,useEffect } from "react";
 
+ const API = "https://my-json-server.typicode.com/RambabuMS/Mock-data";
 
-export function Movielist({ movielist,setMovielist }) {
+export function Movielist() {
    const history= useHistory();
+
+   const [movielist,setMovielist] = useState([]);
+
+   const getMovies = () => {
+    fetch(`${API}/movies`,{
+      method : "GET",})//promise
+    .then((data)=> data.json())//Response Object
+    .then((mvs)=> setMovielist(mvs));
+   }
+
+   useEffect(() => getMovies(), [])
+
+  const deleteMovie= (id) => {
+    fetch(`${API}/movies/${id}`,{
+      method : "DELETE",
+    }).then(() => getMovies());
+  };
+
   return (
     <div className="movie">
-      {movielist.map(( prop, index) => (
+      {movielist.map(( {name,id,img,cast,genre,summary,director,rating}, index) => (
         <Rating
-          {...prop}
+          //{...prop}
+          key={index}
+          name={name}
+          img={img}
+          cast={cast}
+          genre={genre}
+          summary={summary}
+          director={director}
+          rating={rating}
           deletebutton={
                       <IconButton 
                        style={{marginLeft:"auto"}}
-                       onClick={()=>{
-                       const copylist=[...movielist];
-                       copylist.splice(index,1);
-                       setMovielist(copylist);
-          }} color="error" 
+                       onClick={(id)=> deleteMovie(id) } color="error" 
            aria-label="delete" size="medium">
 <DeleteIcon />
 </IconButton>}
@@ -28,7 +52,7 @@ export function Movielist({ movielist,setMovielist }) {
 <EditIcon />
 </IconButton>
          }
-         id={index}
+         id={id}
           
            />
 
@@ -36,3 +60,8 @@ export function Movielist({ movielist,setMovielist }) {
     </div>
   );
 }
+
+// const copylist=[...movielist];
+//                        copylist.splice(index,1);
+//                        setMovielist(copylist);
+          

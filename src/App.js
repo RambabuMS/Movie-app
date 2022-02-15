@@ -17,10 +17,8 @@ import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
-
-
-
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 
 export default function App() {
   const [movielist,setMovielist]=useState(INITIAL_MOVIE_LIST);
@@ -72,13 +70,21 @@ export default function App() {
         <Route path="/movies/edit/:id">
         <Updatemovie  movielist={movielist} setMovielist={setMovielist} />
         </Route>
-        <Route path="/movies/:filmid"><Moviedetails movielist={movielist} /></Route>
-         <Route path="/movies">
-           <Movielist movielist={movielist} setMovielist={setMovielist}/>
+        <Route path="/movies/:filmid">
+        <Moviedetails />
         </Route>
-        <Route path="/color-game"><Newcolor /></Route>
-        <Route path="/tic-tac-toe"><TicTacToe /></Route>
-        <Route path="**"><NotFound /></Route>
+         <Route path="/movies">
+           <Movielist />
+        </Route>
+        <Route path="/color-game">
+        <Newcolor />
+        </Route>
+        <Route path="/tic-tac-toe">
+        <TicTacToe />
+        </Route>
+        <Route path="**">
+        <NotFound />
+        </Route>
       </Switch>
       </div>
     </div>
@@ -87,5 +93,4 @@ export default function App() {
 
   );
 }
-
 

@@ -2,12 +2,24 @@ import { useParams } from "react-router-dom";
 import Button from '@mui/material/Button';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useHistory } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 
-export function Moviedetails({ movielist }) {
+export function Moviedetails() {
   const { filmid } = useParams();
-  console.log(filmid, movielist);
-  const movie = movielist[filmid];
+  //console.log(filmid, movielist);
+  const [movie,setMovie] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      `https://my-json-server.typicode.com/RambabuMS/Mock-data/movies/${filmid}`,
+    {
+      method : "GET",
+    })//promise
+    .then((data)=> data.json())//Response Object
+    .then((mvs)=> setMovie(mvs));
+   }, [])
+
   const history= useHistory();
   return (
     <div>
