@@ -11,7 +11,8 @@ export function Newcolor() {
   const [Colorlist, setColorlist] = useState(["pink", "blue", "yellow", "purple"]);
   return (
     <div className="color-box">
-    <TextField style={styles} variant="outlined"
+     <h1>Color-Game</h1>
+         <TextField style={styles} variant="outlined"
         margin="dense" value={color} 
         onChange={(event) => setColor(event.target.value)} />
      
