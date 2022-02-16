@@ -1,6 +1,6 @@
 [
   {
-    "id": 100,
+    "id": "100",
     "name": "Jai Bhim",
     "img": "https://moviegalleri.net/wp-content/uploads/2021/07/Actor-Suriya-Jai-Bhim-Movie-First-Look-Poster-HD.jpg",
     "cast": "Surya, Lijomol Jose, Manikandan",
@@ -11,7 +11,7 @@
     "trailer": "https://www.youtube.com/embed/Gc6dEDnL8JA"
   },
   {
-    "id": 101,
+    "id": "101",
     "name": "Soorarai Potru",
     "img": "https://www.pinkvilla.com/imageresize/suriya_soorarai_pottru_trailer_release.jpeg?width=752&format=webp&t=pvorg",
     "cast": "Surya, Aparna Balamurali",
@@ -22,7 +22,7 @@
     "trailer": "https://www.youtube.com/embed/fa_DIwRsa9o"
   },
   {
-    "id": 102,
+    "id": "102",
     "name": "Maanaadu",
     "img": "https://m.media-amazon.com/images/M/MV5BMjFkMTFjYjgtNDhkNS00MGNmLWJkZWMtZWIwNGYyOWE3MTM0XkEyXkFqcGdeQXVyMTE1MjcwOTA4._V1_.jpg",
     "cast": "Silambarasan,S.J. Suryah, Y.G.Mahendran",
@@ -33,7 +33,7 @@
     "trailer": "https://www.youtube.com/embed/t9retstFUlM"
   },
   {
-    "id": 103,
+    "id": "103",
     "name": "Thuppakki",
     "img": "https://m.media-amazon.com/images/M/MV5BZTc4YWY5MzAtOTc4Zi00NDVmLThlMGItYjliOGNkYmM3NDBmXkEyXkFqcGdeQXVyOTk3NTc2MzE@._V1_.jpg",
     "cast": "Vijay, Vidyut Jammwal ",
@@ -44,7 +44,7 @@
     "trailer": "https://www.youtube.com/embed/s0O44Sn1hD4"
   },
   {
-    "id": 104,
+    "id": "104",
     "name": "Mankatha",
     "img": "https://www.infoflick.com/poster/mankatha_1573585635.jpg",
     "cast": "Ajith Kumar, Arjun Sarja",
@@ -55,7 +55,7 @@
     "trailer": "https://www.youtube.com/embed/vHESM8iR1JE"
   },
   {
-    "id": 100,
+    "id": "105",
     "name": "Oh Manapenne!",
     "img": "https://static.toiimg.com/photo/msid-87019422/Oh%20Manapenne!.jpg?87019422",
     "cast": "Harish Kalyan, Priya Bhavani Shankar",

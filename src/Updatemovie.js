@@ -68,8 +68,8 @@ export function Updatemovie() {
         },
         }).then(() => history.push("/movies"))
        }
-    
-       
+
+       console.log(movie);
       return (
         <div className="input">
           <h1>Here you can Edit your favourite movies</h1>
