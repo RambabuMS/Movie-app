@@ -4,9 +4,11 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { useHistory } from "react-router-dom";
 import { useState,useEffect } from "react";
-
- const API = "https://my-json-server.typicode.com/RambabuMS/Mock-data";
-
+import { API } from './global'
+ 
+ 
+ 
+  
 export function Movielist() {
    const history= useHistory();
 
@@ -21,6 +23,7 @@ export function Movielist() {
 
    useEffect(() => getMovies(), [])
 
+   //delete the movie and refresh the data(movies)
   const deleteMovie= (id) => {
     fetch(`${API}/movies/${id}`,{
       method : "DELETE",
@@ -47,7 +50,7 @@ export function Movielist() {
            aria-label="delete" size="medium">
 <DeleteIcon />
 </IconButton>}
-         editbutton={<IconButton  color="secondary" onClick={()=>history.push(`/movies/edit/${index}`)}
+         editbutton={<IconButton  color="secondary" onClick={()=>history.push(`/movies/edit/${id}`)}
          aria-label="edit" size = "medium">
 <EditIcon />
 </IconButton>

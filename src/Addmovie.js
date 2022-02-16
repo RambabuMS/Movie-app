@@ -2,6 +2,7 @@ import { useState } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useHistory } from "react-router-dom";
+import { API } from "./global"
 
 export function Addmovie({ movielist, setMovielist }) {
 
@@ -15,7 +16,31 @@ export function Addmovie({ movielist, setMovielist }) {
   const [trail, setTrail] = useState('');
   const history= useHistory();
 
-
+  const addMovie = () => {
+    const newMovie = {
+      name: Name,
+      img: post,
+      cast: cost,
+      genre: gen,
+      summary: sam,
+      director: direct,
+      rating: rate,
+      trailer:trail
+    };
+   // 1. method must be post method
+   //2. body - JSON data
+   //3. headers - JSON data
+   // After POST is complete -> movie t0 /movies   
+   fetch(`${API}/movies/`, {
+   method : 'POST',
+   body: JSON.stringify(newMovie),
+   headers: {
+      "content-type": "application/json"
+ },
+ }).then(() => history.push("/movies"))
+//setMovielist([...movielist, newMovie]);          
+  };   
+  
   return (
     <div className="input">
             <h1>Here you can add your favourite movies</h1>
@@ -36,21 +61,9 @@ export function Addmovie({ movielist, setMovielist }) {
         <TextField className="text" label="Trailer" variant="outlined" margin="dense"
         onChange={(event) => setTrail(event.target.value)} />
       <Button variant="contained"
-        onClick={() => {
-          const newMovie = {
-            name: Name,
-            img: post,
-            cast: cost,
-            genre: gen,
-            summary: sam,
-            director: direct,
-            rating: rate,
-            trailer:trail
-          };
-          setMovielist([...movielist, newMovie]);
-          history.push("/movies");
-        }}
+        onClick={()=> addMovie()}
       >Add Movie</Button>
     </div>
   );
 }
+

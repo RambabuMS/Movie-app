@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
-
+import { API } from './global'
 
 export function Moviedetails() {
   const { filmid } = useParams();
@@ -12,12 +12,13 @@ export function Moviedetails() {
 
   useEffect(() => {
     fetch(
-      `https://my-json-server.typicode.com/RambabuMS/Mock-data/movies/${filmid}`,
+      `${API}/movies/${filmid}`,
     {
       method : "GET",
     })//promise
     .then((data)=> data.json())//Response Object
-    .then((mvs)=> setMovie(mvs));
+    .then((mvs)=> setMovie(mvs))
+    .catch((err)=>console.log(err));
    }, [])
 
   const history= useHistory();
