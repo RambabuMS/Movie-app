@@ -24,7 +24,7 @@ export function Updatemovie() {
     .then((data)=> data.json())//Response Object
     .then((mvs)=> setMovie(mvs))
     .catch((err)=>console.log(err));
-   }, [])
+   })
   return(
       <div>
         { movie ? <Save movie={movie} /> : <h2>Loading</h2> }
