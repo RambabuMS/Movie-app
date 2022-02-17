@@ -6,9 +6,6 @@ import { useHistory } from "react-router-dom";
 import { useState,useEffect } from "react";
 import { API } from './global'
  
- 
- 
-  
 export function Movielist() {
    const history= useHistory();
 
@@ -16,7 +13,8 @@ export function Movielist() {
 
    const getMovies = () => {
     fetch(`${API}/movies`,{
-      method : "GET",})//promise
+      method : "GET",
+    })//promise
     .then((data)=> data.json())//Response Object
     .then((mvs)=> setMovielist(mvs));
    }
@@ -24,9 +22,11 @@ export function Movielist() {
    useEffect(() => getMovies(), [])
 
    //delete the movie and refresh the data(movies)
-  const deleteMovie= (id) => {
-    fetch(`${API}/movies/${id}`,{
-      method : "DELETE",
+
+  // Delete movie -> Refresh data 
+  const deleteMovie = (id) => {
+    fetch(`${API}/movies/${id}`, {
+      method: "DELETE",
     }).then(() => getMovies());
   };
 
@@ -39,14 +39,16 @@ export function Movielist() {
           name={name}
           img={img}
           cast={cast}
-          genre={genre}
+          genre={genre} 
           summary={summary}
           director={director}
           rating={rating}
           deletebutton={
                       <IconButton 
                        style={{marginLeft:"auto"}}
-                       onClick={(id)=> deleteMovie(id) } color="error" 
+                       onClick={()=>{ deleteMovie(id)
+                                         console.log(id)
+                       }} color="error" 
            aria-label="delete" size="medium">
 <DeleteIcon />
 </IconButton>}
