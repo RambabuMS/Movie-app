@@ -19,7 +19,9 @@ export function Moviedetails() {
     .then((data)=> data.json())//Response Object
     .then((mvs)=> setMovie(mvs))
     .catch((err)=>console.log(err));
-   }, [])
+  })
+  
+  //}, [])
 
   const history= useHistory();
   return (

@@ -18,8 +18,9 @@ export function Movielist() {
     .then((data)=> data.json())//Response Object
     .then((mvs)=> setMovielist(mvs));
    }
+   useEffect(() => getMovies())
 
-   useEffect(() => getMovies(), [])
+   //useEffect(() => getMovies(), [])
 
    //delete the movie and refresh the data(movies)
 

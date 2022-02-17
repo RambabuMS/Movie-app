@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 import { Newcolor } from "./Newcolor";
 import { TicTacToe } from "./TicTacToe";
 import { Switch, Route,Redirect } from "react-router-dom";
-import { INITIAL_MOVIE_LIST } from "./INITIAL_MOVIE_LIST";
 import { Movielist } from "./Movielist";
 import { Homepage } from "./Homepage";
 import { NotFound } from "./NotFound";
@@ -21,7 +20,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
 export default function App() {
-  const [movielist,setMovielist]=useState(INITIAL_MOVIE_LIST);
+//  const [movielist,setMovielist]=useState(INITIAL_MOVIE_LIST);
 
   const history= useHistory();
    

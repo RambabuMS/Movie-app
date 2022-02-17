@@ -5,7 +5,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { API } from "./global";
 import { movieValidationSchema } from "./Addmovie";
 import { useFormik } from "formik";
-import * as yup from "yup";
+
 
 
 export function Updatemovie() {
