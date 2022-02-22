@@ -2,12 +2,9 @@
   font-family: sans-serif;
 }
 
-.full-game{
+.full-game {
   background-image: url("https://static.vecteezy.com/system/resources/previews/004/532/221/non_2x/tic-tac-toe-seamless-background-on-dark-blue-illustration-vector.jpg");
   min-height: 100vh;
-}
-.route-container{
-  margin-top: 20px;
 }
 
 img {
@@ -15,106 +12,92 @@ img {
   width: 350px;
   height: 500px;
   margin-top: 20px;
-  object-fit:cover;
+  object-fit: cover;
 }
-.movie{
+.movie {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   gap: 16px;
-  }
-  .input{
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-  }
-  .text{
-    width:50%;
-  }
-  .buton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-.color-box{
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  width: 50%;
+}
+.buton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.color-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
-.Colorbox{
+.Colorbox {
   border: 1px solid black;
-  border-radius:20px;
+  border-radius: 20px;
 }
 
-.homepage{
+.homepage {
   text-align: center;
-  Margin-top: 100px;
-  
+  margin-top: 100px;
 }
-.play{
-  margin-top: 20px;
+.play {
   display: flex;
-  gap: 20px ;
+  gap: 20px;
 }
-.restart{
+.restart {
   margin-top: 50px;
 }
-.game-box{
-    height: 160px;
-    width: 160px;
-    border: 1px solid black;
-    font-size: 150px;
-    background-color: lightcyan;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    
+.game-box {
+  height: 160px;
+  width: 160px;
+  border: 1px solid black;
+  font-size: 150px;
+  background-color: lightcyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.board{
-    display: flex;
-    flex-wrap: wrap;
-    width: 492px;
-    margin-top: 30px;
-  }
-  .full-game{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 492px;
+}
+.full-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
 
-  .turnhide{
-    display :none;
-  }
-  .showturn{
-    display :block;
-    color: lightblue
-  }
-  .error-page{
-    text-align: center;
-    font-size: 60px;
-    margin:0;
-  }
-  .nfound{
-    width: 100%;
-    height: 100%;
-  }
-  .head{
-    color: #fff;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+.turnhide {
+  display: none;
+}
+.showturn {
+  display: block;
+  color: lightblue;
+}
+.error-page {
+  text-align: center;
+  font-size: 60px;
+  margin: 0;
+}
+.nfound {
+  width: 100%;
+  height: 100%;
+}
+.head {
+  color: #fff;
+}
