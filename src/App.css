@@ -101,3 +101,21 @@ img {
 .head {
   color: #fff;
 }
+.img:hover {
+  transform: translateY(1px);
+}
+@media only screen and (max-width: 600px) {
+  .board {
+    width: 370px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .game-box {
+    height: 100px;
+    width: 100px;
+    font-size: 70px;
+  }
+  .head {
+    width: 380px;
+  }
+}

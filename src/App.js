@@ -24,6 +24,11 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { Fragment } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import HomeIcon from "@mui/icons-material/Home";
+import VideoCameraBackIcon from "@mui/icons-material/VideoCameraBack";
+import MovieIcon from "@mui/icons-material/Movie";
+import ColorLensIcon from "@mui/icons-material/ColorLens";
+import CasinoIcon from "@mui/icons-material/Casino";
 
 export default function App() {
   //  const [movielist,setMovielist]=useState(INITIAL_MOVIE_LIST);
@@ -32,29 +37,29 @@ export default function App() {
 
   const array = [
     {
-      name: "HOME",
+      name: <div>HOME</div>,
       onClick: "/",
-      icon: "🏠",
+      icon: <HomeIcon />,
     },
     {
-      name: "MOVIES",
+      name: <div>MOVIES</div>,
       onClick: "/movies",
-      icon: "🎥",
+      icon: <VideoCameraBackIcon />,
     },
     {
-      name: "ADD MOVIE",
+      name: <div>ADD MOVIE</div>,
       onClick: "/movies/add",
-      icon: "🎬",
+      icon: <MovieIcon />,
     },
     {
-      name: "COLOR GAME",
+      name: <div>COLOR GAME</div>,
       onClick: "/color-game",
-      icon: "🎈",
+      icon: <ColorLensIcon />,
     },
     {
-      name: "Tic Tac Toe",
+      name: <div>Tic Tac Toe</div>,
       onClick: "/tic-tac-toe",
-      icon: "⚡",
+      icon: <CasinoIcon />,
     },
   ];
 
