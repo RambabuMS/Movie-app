@@ -61,8 +61,7 @@ export function TicTacToe() {
   };
   return <div className="full-game">
     {winner ? <Confetti width={width} height={height} gravity={0.03} numberOfPieces={300} /> : ""}
-    <div className="head"><h1>Welcome to the Nostalgic Tic-tac-toe Game</h1>
-    </div>
+  
     <span style={styles} className="play"><Button variant="contained" onClick={() => setIsXturn(true)}>Player X<SportsEsportsIcon/> </Button>
       <Button variant="contained" onClick={() => setIsXturn(false)}>Player O<SportsEsportsIcon/></Button></span>
     <p className={winner === null  ? "showturn" : "turnhide"}>{isXturn ? <h2>X Turn <GamepadIcon color="primary"/></h2> : <h2>O Turn<GamepadIcon color="primary"/></h2>}</p>
