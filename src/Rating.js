@@ -10,7 +10,17 @@ import { CardActions } from "@mui/material";
 import Badge from "@mui/material/Badge";
 
 export function Rating(
-  { name, img, genre, summary, director, rating, deletebutton, editbutton, id },
+  {
+    name,
+    poster,
+    genre,
+    summary,
+    director,
+    rating,
+    deletebutton,
+    editbutton,
+    id,
+  },
   index
 ) {
   const [dislike, setdislike] = useState(0);
@@ -23,7 +33,7 @@ export function Rating(
   return (
     <Card className="movie-container">
       <CardContent>
-        <img src={img} id="res" className="poster" alt="pics" />
+        <img src={poster} id="res" className="poster" alt="pics" />
 
         <h2>Movie : {name}</h2>
         <div style={{ width: "350px" }}>

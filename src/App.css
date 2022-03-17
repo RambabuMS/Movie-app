@@ -101,8 +101,8 @@ img {
 .head {
   color: #fff;
 }
-.img:hover {
-  transform: translateY(1px);
+img:hover {
+  transform: translateY(2px);
 }
 @media only screen and (max-width: 600px) {
   .board {

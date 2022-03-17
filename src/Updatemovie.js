@@ -35,7 +35,7 @@ function Save({ movie }) {
   const formik = useFormik({
     initialValues: {
       name: movie.name,
-      poster: movie.img,
+      poster: movie.poster,
       rating: movie.rating,
       summary: movie.summary,
       trailer: movie.trailer,

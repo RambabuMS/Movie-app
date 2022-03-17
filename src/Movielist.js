@@ -33,12 +33,15 @@ export function Movielist() {
   return (
     <div className="movie">
       {movielist.map(
-        ({ name, id, img, cast, genre, summary, director, rating }, index) => (
+        (
+          { name, id, poster, cast, genre, summary, director, rating },
+          index
+        ) => (
           <Rating
             //{...prop}
             key={index}
             name={name}
-            img={img}
+            poster={poster}
             cast={cast}
             genre={genre}
             summary={summary}
