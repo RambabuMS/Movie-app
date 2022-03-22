@@ -24,8 +24,8 @@ export function Movielist() {
   //delete the movie and refresh the data(movies)
 
   // Delete movie -> Refresh data
-  const deleteMovie = (id) => {
-    fetch(`${API}/movies/${id}`, {
+  const deleteMovie = (_id) => {
+    fetch(`${API}/movies/${_id}`, {
       method: "DELETE",
     }).then(() => getMovies());
   };
@@ -34,7 +34,7 @@ export function Movielist() {
     <div className="movie">
       {movielist.map(
         (
-          { name, id, poster, cast, genre, summary, director, rating },
+          { name, poster, cast, genre, summary, director, rating, _id },
           index
         ) => (
           <Rating
@@ -51,8 +51,8 @@ export function Movielist() {
               <IconButton
                 style={{ marginLeft: "auto" }}
                 onClick={() => {
-                  deleteMovie(id);
-                  console.log(id);
+                  deleteMovie(_id);
+                  console.log(_id);
                 }}
                 color="error"
                 aria-label="delete"
@@ -64,14 +64,14 @@ export function Movielist() {
             editbutton={
               <IconButton
                 color="secondary"
-                onClick={() => history.push(`/movies/edit/${id}`)}
+                onClick={() => history.push(`/movies/edit/${_id}`)}
                 aria-label="edit"
                 size="medium"
               >
                 <EditIcon />
               </IconButton>
             }
-            id={id}
+            id={_id}
           />
         )
       )}

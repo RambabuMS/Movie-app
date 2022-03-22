@@ -51,7 +51,7 @@ function Save({ movie }) {
 
   const editMovie = (UpdatedMovie) => {
     console.log("Updated", UpdatedMovie);
-    fetch(`${API}/movies/${movie.id}`, {
+    fetch(`${API}/movies/${movie._id}`, {
       method: "PUT",
       body: JSON.stringify(UpdatedMovie),
       headers: {
